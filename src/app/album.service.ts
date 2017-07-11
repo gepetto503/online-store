@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Album } from './album.model';
 import { ALBUMS } from './mock-album';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class AlbumService {
+  
+  albums: FirebaseListObservable<any[]>;
 
   constructor() { }
 
