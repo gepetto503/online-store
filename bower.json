@@ -6,7 +6,7 @@
     "Brendan Hanna <gepetto503@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/gepetto503/online-store",
   "ignore": [
     "**/.*",
     "node_modules",

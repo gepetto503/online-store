@@ -1,5 +1,8 @@
 <h2>Marketplace</h2>
 
+<!--loop knows what albums is because it's in the components class selector-->
+<!--async pipe ...?-->
+
 <div *ngFor="let album of albums | async"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
