@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Firebase Credentials
 
+File with api keys is gitignored, you'll have to creat your own with your own credentials.  Here's how:
+
 Make a free account at Firebase's website.
 
 Once you've created an account, you should be taken to a user dashboard area, with an option to Create a New Project. Select this option, provide a name for your new project, and select your Country/region from the drop-down menu.
@@ -52,3 +54,5 @@ export var masterFirebaseConfig = {
   storageBucket: "xxxxxxxxxx",
   messagingSenderId: "xxxxxxxxxx"
 };
+
+(If you've already signed up for firebase, find the modal info in overview --> add Firebase to your web app)
