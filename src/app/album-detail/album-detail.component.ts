@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 import { Album } from '../album.model';
 import { AlbumService } from '../album.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-album-detail',
@@ -11,6 +12,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   styleUrls: ['./album-detail.component.css'],
   providers: [AlbumService]
 })
+
 export class AlbumDetailComponent implements OnInit {
   albumId: string;
   albumToDisplay;
@@ -18,7 +20,8 @@ export class AlbumDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location,
-    private albumService: AlbumService
+    private albumService: AlbumService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -27,5 +30,11 @@ export class AlbumDetailComponent implements OnInit {
     });
     this.albumToDisplay = this.albumService.getAlbumById(this.albumId);
   }
+
+  
+  goBack() {
+    this.router.navigateByUrl('marketplace');
+  };
+
 
 }

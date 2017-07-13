@@ -27,6 +27,9 @@ export class MarketplaceComponent implements OnInit {
     this.albums = this.albumService.getAlbums();
   }
 
+  //has router capabilities from router variable in constructor,
+  //album is being fed in from html, it refers to an index of the albums array which is a FirebaseListObservable type that is fed data by AlbumService, which gets it from database.list('albums').
+  //so this looks in the albums array(/folder?) in the database for an object that matches the key of the clicked object, which came from the database in the first place as described above.
   goToDetailPage(clickedAlbum) {
     this.router.navigate(['albums', clickedAlbum.$key]);
   };
