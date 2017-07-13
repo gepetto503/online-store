@@ -1,6 +1,11 @@
-<div>
-  <h3>{{(albumToDisplay | async)?.title}}</h3>
-  <h4>{{(albumToDisplay | async)?.artist}}</h4>
-  <p>{{(albumToDisplay | async)?.description}}</p>
-  <button (click)="goBack()">Back</button>
+<div class="album-detail">
+  <div class="album-detail-image">
+    <img src="" alt="">
+  </div>
+  <div class="album-detail-text">
+    <h3>{{(albumToDisplay | async)?.title}}</h3>
+    <h4>{{(albumToDisplay | async)?.artist}}</h4>
+    <p>{{(albumToDisplay | async)?.description}}</p>
+    <div class="button" (click)="goBack()">Back</div>
+  </div>
 </div>

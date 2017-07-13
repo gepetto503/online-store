@@ -1,33 +1,43 @@
 <h4>Edit Album</h4>
+
 <!--New Album Title-->
-<label for="album">New Album Title:</label>
-<input type="text" class="form-control" id="album"
-required
-[(ngModel)]="selectedAlbum.title" album="album" #album="ngModel">
-<div [hidden]="album.valid || album.pristine"
-    class="alert alert-danger">
- Album Title is required
+<div>
+  <label for="album">New Album Title:</label>
+  <input type="text" class="form-control" id="album" required [(ngModel)]="selectedAlbum.title" album="album" #album="ngModel">
+
+  <div [hidden]="album.valid || album.pristine" class="alert alert-danger">
+    <p>Album Title is required</p>
+  </div>
 </div>
+
 <br>
+
 <!--New Album Artist Title-->
-<label for="artist">New Album Artist:</label>
-<input type="text" class="form-control" id="artist"
-required
-[(ngModel)]="selectedAlbum.artist" artist="artist" #artist="ngModel">
-<div [hidden]="artist.valid || artist.pristine"
-    class="alert alert-danger">
- Artist is required
+<div>
+  <label for="artist">New Album Artist:</label>
+  <input type="text" class="form-control" id="artist" required [(ngModel)]="selectedAlbum.artist" artist="artist" #artist="ngModel">
+  <div [hidden]="artist.valid || artist.pristine" class="alert alert-danger">
+    Artist is required
+  </div>
 </div>
+
 <br>
+
 <!--New Album Description-->
-<label for="descript">New Album Description:</label>
-<input type="text" class="form-control" id="descript"
-required
-[(ngModel)]="selectedAlbum.description" descript="descript" #descript="ngModel">
-<div [hidden]="artist.valid || artist.pristine"
-    class="alert alert-danger">
- Album Description is required
+<div>
+  <label for="descript">New Album Description:</label>
+  <input type="text" class="form-control" id="descript" required
+  [(ngModel)]="selectedAlbum.description" descript="descript" #descript="ngModel">
+  <div [hidden]="artist.valid || artist.pristine" class="alert alert-danger">
+    <p>Album Description is required</p>
+  </div>
 </div>
+
+<div>
+  <label for="descript">New Image URL:</label>
+  <input type="text" class="form-control" id="descript" required
+  [(ngModel)]="selectedAlbum.imageUrl" descript="descript" #descript="ngModel">
+</div>
+
 <button (click)="beginUpdatingAlbum(selectedAlbum)">Update</button>
-<hr>
 <button (click)="beginDeletingAlbum(selectedAlbum)">Delete</button>

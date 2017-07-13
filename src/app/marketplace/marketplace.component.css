@@ -1,28 +1,5 @@
-.album {
-  display: flex;
-  align-items: center;
-
-}
-
-/*button {
-  display: inline-block;
-  height: 30px;
-  width: 90px;
-  border-radius: 5px;
-  margin-top: 12px;
-  margin-left: 20px;
-
-}*/
-
 .button {
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 100px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+/* on top of global button styles in styles.css*/
   margin-left: 20px;
   margin-top: 12px;
 }

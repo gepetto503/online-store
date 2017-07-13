@@ -4,14 +4,16 @@
 <!--that list comes from FirebaseListObservable-->
 
 <div *ngFor="let album of albums | async"  class="panel panel-default">
-  <div class="panel-body album">
-    <h3><em>{{album.title}}</em> by {{album.artist}}</h3>
-    <div class="button" (click)="goToDetailPage(album)">Peep</div>
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
+
     <!--only viewable to user when on admin route-->
-    <div *ngIf="currentRoute === '/admin'">
+    <div class="edit" *ngIf="currentRoute === '/admin'">
       {{album.description}}
       <hr>
       <app-edit-album [selectedAlbum]="album"></app-edit-album>
     </div>
+    <!--only viewable to user when on admin route-->
+
   </div>
 </div>

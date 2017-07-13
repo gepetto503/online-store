@@ -1,22 +1,92 @@
+.boombox-box {
+  position: relative;
+  width: 1000px;
+  margin: auto;
+}
+
+
+#boombox {
+  width: 100%;
+}
+
+
+.button {
+  /*these are on top of the global button styles in styles.css*/
+  width: 200px;
+  height: 38px;
+  position: absolute;
+  top: 514px;
+  left: 400px;
+  font-family: 'Shrikhand', cursive;
+}
+
+@media screen and (max-width: 990px) {
+  .boombox-box {
+    width: 800px;
+    /*margin-left: 70px;*/
+  }
+  .button {
+    top: 427px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170px;
+    height: 30px;
+  }
+
+}
+
+@media screen and (max-width: 770px) {
+  .boombox-box {
+    width: 600px;
+    margin-left: 40px;
+  }
+  .button {
+    top: 321px;
+    left: 51%;
+    width: 110px;
+    height: 20px;
+  }
+
+}
+
+.jumbo-text {
+  /*z-index: 1;*/
+  margin: auto;
+  margin-top: 40px;
+  font-family: 'Shrikhand', cursive;
+}
+
 h1 {
   text-align: center;
   margin: 80px 0px;
+  margin: auto;
+  font-size: 60pt;
+
+
 }
 
 h3 {
   line-height: 1.75em;
   width: 75%;
   margin: 50px auto;
+  font-size: 20pt;
+
 }
 
-.button {
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 200px;
-  height: 40px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+h1, h3 {
+  text-align: center;
 }
+
+
+
+
+
+
+/*.darken {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}*/

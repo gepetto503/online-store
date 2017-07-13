@@ -3,8 +3,6 @@
     <h3 class="panel-title">Add New Album to Inventory</h3>
   </div>
   <div class="panel-body">
-    <div>
-
       <!--album field-->
       <div>
         <label>Album Title:</label>
@@ -26,10 +24,15 @@
         <textarea #newDescription></textarea>
       </div>
 
-      <!--button-->
-      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+      <div>
+        <label>Image URL:</label>
+        <br>
+        <textarea #newImageUrl></textarea>
+      </div>
 
-    </div>
+      <!--button-->
+      <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value, newImageUrl.value); newTitle.value=''; newArtist.value=''; newDescription.value=''; newImageUrl.value=''">Add</button>
+
   </div>
 </div>
 <div>

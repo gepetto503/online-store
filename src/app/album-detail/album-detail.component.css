@@ -1,0 +1,22 @@
+.album-detail {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+.album-detail-image {
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  margin-right: 50px;
+}
+
+/*this is on top of the global button styles in styles.css*/
+.button {
+  /*margin-left: 20px;*/
+  margin-top: 12px;
+}
