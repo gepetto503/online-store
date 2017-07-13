@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'marketplace',
+    path: 'albums',
     component: MarketplaceComponent
   },
   {

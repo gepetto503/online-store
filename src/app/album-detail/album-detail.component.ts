@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Album } from '../album.model';
 import { AlbumService } from '../album.service';
 import { FirebaseObjectObservable } from 'angularfire2/database';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-album-detail',
@@ -31,9 +30,9 @@ export class AlbumDetailComponent implements OnInit {
     this.albumToDisplay = this.albumService.getAlbumById(this.albumId);
   }
 
-  
+  //navigateByUrl method lets you navigate to a route by simply passing in the name of the path, which matches the path property in app.routing.ts
   goBack() {
-    this.router.navigateByUrl('marketplace');
+    this.router.navigateByUrl('albums');
   };
 
 
