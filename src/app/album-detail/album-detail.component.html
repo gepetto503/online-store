@@ -1,6 +1,6 @@
 <div class="album-detail">
   <div class="album-detail-image">
-    <img src="" alt="">
+    <img src="{{(albumToDisplay | async)?.imageUrl}}" alt="{{(albumToDisplay | async)?.description}}">
   </div>
   <div class="album-detail-text">
     <h3>{{(albumToDisplay | async)?.title}}</h3>

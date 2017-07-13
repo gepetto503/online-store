@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Album } from './album.model';
-import { ALBUMS } from './mock-album';
+// import { ALBUMS } from './mock-album';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 //injectable is the stuff we want to be able to use in many different components
@@ -33,7 +33,8 @@ export class AlbumService {
     var albumEntryInFirebase = this.getAlbumById(localUpdatedAlbum.$key);
     albumEntryInFirebase.update({title: localUpdatedAlbum.title,
                                 artist: localUpdatedAlbum.artist,
-                                description: localUpdatedAlbum.description});
+                                description: localUpdatedAlbum.description,
+                                imageUrl: localUpdatedAlbum.imageUrl});
   }
 
   deleteAlbum(localAlbumToDelete){

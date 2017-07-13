@@ -5,6 +5,7 @@
 
 <div *ngFor="let album of albums | async"  class="panel panel-default">
   <div class="panel-body">
+    <img src="{{album.imageUrl}}" alt="{{album.description}}">
     <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
 
     <!--only viewable to user when on admin route-->
